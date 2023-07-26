@@ -1,0 +1,7 @@
+# User vs Kernel Mode
+
+Modo de Usuario: 
+Cuando se inicia un programa en un sistema operativo, por ejemplo, Windows, entonces se lanza el programa en modo de usuario. Y cuando un programa en modo de usuario solicita ejecutarse, Windows crea un proceso y un espacio de direcciones virtuales (espacio de direcciones para ese proceso). Los programas en modo de usuario tienen menos privilegios que las aplicaciones en modo de usuario y no pueden acceder directamente a los recursos del sistema. Por ejemplo, si una aplicación en modo de usuario quiere acceder a recursos del sistema, primero debe pasar por el kernel del sistema operativo utilizando llamadas al sistema (syscalls).
+
+Modo de Kernel: 
+El kernel es el programa central en el que dependen todos los demás componentes del sistema operativo, se utiliza para acceder a los componentes de hardware y programar qué procesos deben ejecutarse en un sistema informático y cuándo, y también administra la interacción entre el software de aplicación y el hardware. Por lo tanto, es el programa con más privilegios; a diferencia de otros programas, puede interactuar directamente con el hardware. Cuando los programas que se ejecutan en modo de usuario necesitan acceso al hardware, por ejemplo, la cámara web, primero deben pasar por el kernel utilizando una llamada al sistema, y para llevar a cabo estas solicitudes, la CPU cambia de modo de usuario a modo de kernel en el momento de la ejecución. Después de completar finalmente la ejecución del proceso, la CPU vuelve a cambiar al modo de usuario.
